@@ -1,0 +1,821 @@
+/* Basic Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+
+/* Basic Navigation Bar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+/* Container for Centering Navbar Content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #9966cc;
+    font-size: 17px;
+}
+
+
+/* Toggle Button for Hamburger Menu */
+.toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 30px;
+    position: relative;
+    margin-left: auto;
+    /* Align toggle button to the right */
+    margin-right: 10px;
+
+}
+
+/* Toggle Icon Visibility */
+.toggle-icon {
+    display: block;
+}
+
+.close-icon {
+    display: none;
+}
+
+.toggle-button.active .toggle-icon {
+    display: none;
+}
+
+.toggle-button.active .close-icon {
+    display: block;
+}
+
+/* Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-links {
+        background-color: #007bff;
+        position: absolute;
+        margin-left: 40%;
+        height: 100wh;
+        top: 60px;
+        /* Adjust based on your navbar height */
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        gap: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-left: 1px solid #728daa;
+        
+    }
+    
+
+    .nav-links.active {
+        display: flex;
+        color: #ddd;
+        /* Display menu when toggle is active */
+    }
+
+    .toggle-button {
+        display: block;
+        background-color: #fff;
+        color: #007bff;
+        /* Show toggle button on smaller screens */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        /* Add some spacing for mobile menu items */
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+        
+    }
+    .nav-links li:last-child {
+        border-bottom: none; /* Remove the line from the last item */
+    }
+
+
+    .nav-links a {
+        font-size: 18px;
+        color: #fff;
+        /* Increase font size for better visibility on small screens */
+    }
+    .nav-links a:hover{
+        font-size: 18px;
+        color: #fff;
+        /* Increase font size for better visibility on small screens */
+    }
+    
+}
+
+/* Ensure Container Fits Screen */
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    /* Adjust as needed */
+    margin: 0 auto;
+}
+
+
+
+
+/* Home Section Styles */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 73px 15px;
+    /* Adjust padding to ensure content isn't hidden behind the nav bar */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    /* Ensure it takes full width */
+    flex-wrap: wrap;
+    /* Allow items to wrap in smaller screens */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.intro-text {
+    flex: 1;
+    /* color:#fff; */
+    padding-right: 20px;
+    text-align: left;
+    /* Align text to the left on larger screens */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.intro-text h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+    padding: 0;
+    /* Remove padding from heading */
+}
+
+.intro-text .name-intro {
+    font-size: 45px;
+    margin: 0;
+}
+
+.intro-text .type-intro {
+    margin-top: 0;
+}
+
+#element {
+    color: #007bff;
+}
+
+.short-line {
+    width: 50%;
+    /* Width of the line */
+    height: 2px;
+    /* Thickness of the line */
+    background-color: #704a97;
+    /* Dark color for the line */
+    border: none;
+    /* Remove default border */
+    margin: 3px 0;
+    /* Space above and below the line */
+}
+
+.intro-text p {
+    font-size: 20px;
+    /* Adjust font size */
+    line-height: 1.6;
+    /* Improve line spacing */
+    margin-top: 10px;
+    /* Add space above the paragraph */
+    margin-bottom: 20px;
+    /* Add space below the paragraph */
+    padding: 0;
+    /* Remove padding from paragraph */
+}
+
+.intro-image {
+    flex: 1;
+    text-align: right;
+    /* Align image to the right on larger screens */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.intro-image img {
+    max-width: 100%;
+    /* Ensure image is responsive */
+    height: auto;
+    border-radius: 8px;
+    /* Optional: adds rounded corners to the image */
+}
+
+/* Typewriter Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+/* Resume Button Styles */
+.resume-button {
+    display: inline-block;
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    line-height: 1.6;
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.resume-button:hover {
+    border: 1px solid #fff;
+    background: #007bff;
+    color: #fff;
+    /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+        /* Center-align text and image on smaller screens */
+    }
+
+    .intro-text {
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .intro-image {
+        margin-top: 20px;
+        /* Add margin to the top for spacing */
+        display: none;
+    }
+
+    .resume-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 28px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .intro-text p {
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+
+/* About Section Styles */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9; /* Optional background color */
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 2;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-details {
+    position: relative;
+    padding-left: 30px; /* Space for the vertical line */
+}
+
+.about-details::before {
+    content: '';
+    position: absolute;
+    left: 14px; /* Position the line to the left of the text */
+    top: 21px;
+    bottom: 28px; /* Adjust based on content */
+    width: 3px; /* Width of the vertical line */
+    background-color: #007bff; /* Color of the line */
+    z-index: 1; /* Ensure line is above other content */
+}
+
+.linkedin-button{
+    text-decoration: none;
+    color:#007bff;
+}
+
+/* Style for the bullet points */
+.about-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.about-details ul strong{
+    color: #007bff;
+}
+
+.about-details ul li {
+    position: relative;
+    padding: 10px 0; /* Spacing between items */
+}
+
+/* Custom bullet points */
+.about-details ul li::before {
+    content: '•'; /* Bullet character */
+    position: absolute;
+    left: -20px; /* Adjust based on your design */
+    color: #007bff; /* Bullet color */
+    font-size: 30px; /* Bullet size */
+    line-height: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-text {
+        padding-left: 0;
+    }
+
+    .about-details {
+        padding-left: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .about-details::before {
+        left: 9px; /* Move the line closer to the text on smaller screens */
+        width: 3px;
+        top: 20px; /* Adjust width if needed */
+        bottom: 50px;
+    }
+
+    .about-details ul li::before {
+        left: -15px; /* Adjust bullet position for better alignment */
+    }
+}
+
+
+
+
+
+
+
+
+/* Skills Section Styles */
+.skills-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.doughnut-chart-container {
+    max-width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .skills-section h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-section h2 {
+        font-size: 24px;
+    }
+
+    .doughnut-chart-container {
+        max-width: 300px;
+    }
+}
+
+
+
+
+/* projects Section */
+/* CSS */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.projects-section h2{
+    margin-bottom: 50px;
+    font-size: 36px;
+
+}
+
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    width: 300px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+.project-card h3{
+    color: #007BFF;
+}
+.project-card strong{
+    color:#007bff;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #007BFF;
+}
+
+.project-details {
+    display: none;
+    padding: 20px;
+    background-color: #f1f1f1;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+.project-details a{
+    text-decoration: none;
+}
+.project-card.expanded {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card.expanded .project-details {
+    display: block;
+    max-height: 200px; /* Adjust as needed */
+    padding: 20px;
+}
+
+
+
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 20px;
+}
+
+.contact-form-container {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 0 auto;
+    /* Center the form container */
+    border-radius: 8px;
+    padding-right: 30px;
+    background-color: #fff;
+    max-width: 100%;
+    /* Ensure form doesn't exceed screen width */
+    box-sizing: border-box;
+    /* Include padding and borders in the element's width */
+}
+
+.contact-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    /* Ensure input fields take full width */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Prevent overflow due to padding */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    color: white;
+}
+
+.contact-image {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    width: 85%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        /* Center form and image on smaller screens */
+    }
+
+    .contact-form-container {
+        width: 100%;
+        /* Make sure the form takes up full width */
+        max-width: 100%;
+        /* Prevent form from overflowing */
+        padding-right: 0;
+        /* Remove extra padding on smaller screens */
+    }
+
+    .contact-image {
+        display: none;
+        /* Hide image on smaller screens */
+    }
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #007bff;
+    color: #fff;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Footer Heading and Text */
+.footer-left h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Footer Center Section */
+.footer-center p {
+    font-size: 14px;
+}
+
+/* Footer Right Links */
+.footer-right a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-size: 16px;
+}
+
+.footer-right a:hover {
+    color: #f0f0f0;
+}
+
+.footer-right i {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-section {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .footer-right a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+
+#backToTop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it doesn't overlap other elements */
+    background-color: #fff;
+    border: 2px solid #0056b3;
+    outline: none;
+    /* Remove outline */
+    color: #0056b3;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 10px;
+    /* Increased padding for a larger button */
+    border-radius: 50%;
+    /* Circle shape */
+    font-size: 20px;
+    /* Increase font size */
+    width: 40px;
+    /* Fixed width for the circle */
+    height: 40px;
+    /* Fixed height for the circle */
+    text-align: center;
+    /* Center the text */
+    line-height: 20px;
+    /* Vertical alignment of the text */
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+    color: #fff;
+    /* Darker color on hover */
+}

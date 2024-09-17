@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya - Python Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Portfolio</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-item" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" class="nav-item" onclick="closeMenu()">About</a></li>
+                <li><a href="#skill" class="nav-item" onclick="closeMenu()">Skill</a></li>
+                <li><a href="#projects" class="nav-item" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#contact" class="nav-item" onclick="closeMenu()">Contact</a></li>
+            </ul>
+            <button class="toggle-button" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="toggle-icon">&#9776;</span> <!-- Menu icon (hamburger) -->
+                <span class="close-icon">&#10005;</span> <!-- Close icon (cross) -->
+            </button>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <div class="intro-text">
+                <h1>Hello, It's Me</h1>
+                <h1 class="name-intro">Aditya Vishwakarma</h1>
+                <h1 class="type-intro">I'm a&nbsp;<span id="element">Python Developer</span></h1>
+                <p>Final year IT student with expertise in Python, web development, and app creation. Check out my work
+                    below!</p>
+                <!-- Resume Download Button -->
+                <a href="style/AV_Resume.pdf" class="resume-button" download>Download Resume</a>
+            </div>
+            <div class="intro-image">
+                <img src="style/adityalogo3.png" alt="Aditya Vishwakarma" />
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="style/adityalogo2.png" alt="About Image" />
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <div class="about-details">
+                    <ul>
+                        <li><strong>Hello, I'm Aditya Vishwakarma.</strong> I am a final-year IT student specializing in
+                            Python programming and web development. Currently, I am gaining practical experience as a
+                            Python Intern at CodSoft. My interests extend to penetration testing and ethical hacking.
+                        </li>
+                        <li><strong>Professional Skills</strong></li>
+                        <ul>
+                            <li><strong>Web Technologies:</strong> HTML5, CSS, JavaScript</li>
+                            <li><strong>Programming Languages:</strong> Python</li>
+                            <li><strong>Certifications:</strong> Generative AI, Python Essentials, Ethical Hacking</li>
+                        </ul>
+                        <li><strong>Educational Background</strong></li>
+                        <ul>
+                            <li>Currently pursuing a Bachelor's degree in Information Technology at Pune Vidyarthi
+                                Griha’s College of Science & Technology</li>
+                            <li>Completed schooling at Pune Vidyarthi Griha's Vidya Bhavan School and Joymax English
+                                High School & Junior College</li>
+                        </ul>
+                        <li><strong>Mission & Vision</strong> I am dedicated to leveraging cutting-edge technologies to
+                            address complex challenges. My certifications in Generative AI and Ethical Hacking provide
+                            me with a unique perspective to approach problems innovatively.</li>
+                        <li><strong>Professional Connections</strong> I am always open to connecting with professionals
+                            and exploring collaborative opportunities. Feel free to reach out through <a
+                                class="linkedin-button" href="https://www.linkedin.com/in/aditya-vk-vishwakarma"
+                                target="_blank"><strong>linkedIn</strong></a> or via <a class="linkedin-button"
+                                href="mailto:work.aditya2010@gmail.com"><strong>Email</strong></a>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section end -->
+
+
+    <!-- skill section -->
+    <section id="skill" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-content">
+            <div class="doughnut-chart-container">
+                <canvas id="skillsDoughnutChart"></canvas>
+            </div>
+        </div>
+    </section>
+    <!-- skill section end -->
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" data-id="project1">
+                <img src="style/project1.png" alt="PVG's Canteen Website">
+                <h3>PVG's Canteen</h3>
+                <div class="project-details">
+                    <p>Developed a website for a college <a class="link-button" href="https://cyberfortify.github.io/PVGs-Canteen-Website/" target="_blank"><strong>canteen</strong></a> named <strong>PVG's Canteen</strong>
+                        using . This project was HTML, CSS, and Bootstrap,
+                        recognized with a <strong>2nd prize</strong> for its effective use of responsive design and
+                        interactive layout.
+                        The tech stack included <strong>HTML</strong>, <strong>CSS</strong>, and
+                        <strong>Bootstrap</strong> ensuring a user-friendly experience across
+                        various devices.
+                    </p>
+                </div>
+            </div>
+            <div class="project-card" data-id="project2">
+                <img src="style/project2.jfif" alt="Desktop Voice Assistant">
+                <h3>Desktop Voice Assistant</h3>
+                <div class="project-details">
+                    <p>Created a <a class="link-button" href="https://github.com/cyberfortify/HexSoftwares_Voice_Assistant" target="_blank"><strong>voice assistant</strong></a> during an internship at <strong>Hex Softwares</strong>
+                        using <strong>Python</strong>. This project
+                        featured <strong>voice commands</strong> to perform tasks such as telling the time and opening
+                        YouTube or Google.
+                        The tech stack involved Python, focusing on seamless <strong>voice interactions</strong> and
+                        <strong>app navigation</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="project-card" data-id="project3">
+                <img src="style/project3.png" alt="Contact Book">
+                <h3>Contact Book</h3>
+                <div class="project-details">
+                    <p>Developed a simple <a class="link-button" href="https://github.com/cyberfortify/CODSOFT_Contact_book" target="_blanks"><strong>contact management application</strong></a> using Python and Tkinter. This
+                        application
+                        allows users to add, view, and delete contacts with ease. Utilizing <strong>Python</strong> and
+                        <strong>Tkinter</strong>, the
+                        project emphasizes straightforward <strong>functionality</strong> and a
+                        <strong>user-friendly</strong> interface.
+                    </p>
+                </div>
+            </div>
+            <div class="project-card" data-id="project4">
+                <img src="style/project4.jfif" alt="Cafe Management System">
+                <h3>Cafe Management System</h3>
+                <div class="project-details">
+                    <p>Recently created a <a class="link-button" href="https://github.com/cyberfortify/CafeManagement" target="_blanks"><strong>cafe management system</strong></a> using Python. This system enables
+                        users to view the
+                        menu, place orders, and calculate the total cost. Built with <strong>Python</strong>, it offers
+                        a streamlined
+                        experience for <strong>managing</strong> cafe operations, enhancing both
+                        <strong>efficiency</strong> and <strong>user convenience</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-content">
+            <div class="contact-form-container">
+                <h2>Contact Me</h2>
+                <p>
+                    If you have any questions or just want to get in touch, feel free to
+                    send me a message using the form below or reach out through my
+                    email.
+                </p>
+                <form action="https://formspree.io/f/meojwwro" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+            </div>
+            <div class="contact-image">
+                <img src="style/adityalogo3.png" alt="Contact Image" />
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-section footer-left">
+            <h2>Aditya Vishwakarma</h2>
+            <p>Python Developer | Enthusiastic about building efficient and scalable solutions</p>
+        </div>
+        <div class="footer-section footer-center">
+            <p>&copy; 2024 Aditya Vishwakarma. Crafted with passion. All rights reserved</p>
+        </div>
+        <div class="footer-section footer-right">
+            <a href="https://www.linkedin.com/in/aditya-vk-vishwakarma" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Cyberfortify" target="_blank">
+                <i class="fa fa-github"></i> GitHub
+            </a>
+            <a href="mailto:work.aditya2010@gmail.com">
+                <i class="fa fa-envelope"></i> Email
+            </a>
+            <a href="tel:+919004370475">
+                <i class="fa fa-phone"></i> Phone
+            </a>
+        </div>
+    </footer>
+
+
+    <button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
+
+
+    <!-- Navbar toggle button -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('section');
+
+            function changeActiveLink() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
+
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+
+            changeActiveLink();
+            window.addEventListener('scroll', changeActiveLink);
+        });
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const toggleButton = document.querySelector('.toggle-button');
+            navLinks.classList.toggle('active');
+            toggleButton.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a link
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const toggleButton = document.querySelector('.toggle-button');
+            navLinks.classList.remove('active');
+            toggleButton.classList.remove('active');
+        }
+
+        // Handle navbar color change on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) { // Adjust this value based on when you want the color to change
+                navbar.classList.add('solid');
+                navbar.classList.remove('transparent');
+            } else {
+                navbar.classList.add('transparent');
+                navbar.classList.remove('solid');
+            }
+        });
+
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.progress-bar').forEach(function (bar) {
+                let percentage = bar.dataset.percentage;
+                bar.querySelector('span').style.width = percentage + '%';
+            });
+        });
+
+    </script>
+
+    <!-- Skill Section -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('skillsDoughnutChart').getContext('2d');
+        const skillsDoughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Python Programming', 'Web Development', 'CyberSecurity', 'Generative AI', 'Team Collaboration', 'Attention to Detail'],
+                datasets: [{
+                    label: 'Skill Distribution',
+                    data: [80, 70, 40, 50, 50, 60], // Skill levels in percentage
+                    backgroundColor: [
+                        '#ff6384',
+                        '#36a2eb',
+                        '#cc65fe',
+                        '#ffce56',
+                        '#4bc0c0',
+                        '#009688'
+                    ],
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                            }
+                        }
+                    },
+                    // Optional: Customize the cutout percentage to adjust the ring size
+                    doughnut: {
+                        cutout: '50%' // Adjust this to change the thickness of the doughnut
+                    }
+                }
+            }
+        });
+
+    </script>
+
+
+    <script>
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Close all cards
+                document.querySelectorAll('.project-card').forEach(c => {
+                    if (c !== card) {
+                        c.classList.remove('expanded');
+                    }
+                });
+                // Toggle the clicked card
+                card.classList.toggle('expanded');
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            if (name === '' || email === '' || message === '') {
+                event.preventDefault(); // Prevent form submission
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
+    
+
+
+    <!-- Typed js  -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Python Developer'],
+            typeSpeed: 100,
+        });
+    </script>
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</body>
+
+</html>
